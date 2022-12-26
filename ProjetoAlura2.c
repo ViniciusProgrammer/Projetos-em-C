@@ -4,11 +4,9 @@
 int main()
 {
     int numerosecreto = 42; // variável do número  secreto
-
     int chute; // variável dos chutes
     int tentativas = 1;
-
-    int pontos = 1000; //Variável pontos inciando em 1000
+    double pontos = 1000; //Variável pontos inciando em 1000
 
     while(1) { //Faz com que o loop seja sempre verdadeiro ou seja o loop vira infinito
 
@@ -45,13 +43,13 @@ int main()
         }
         tentativas = tentativas + 1;
 
-        int pontosperdidos = (chute - numerosecreto) / 2;//criei uma variável pontos perdidos fazendo o (chute - numero secreto)/2 
+        double pontosperdidos = (chute - numerosecreto) / 2.0;//criei uma variável pontos perdidos fazendo o (chute - numero secreto)/2 
         pontos = pontos - pontosperdidos; //Aqui 1000 recebe 1000 menos todos os pontos perdidos em todas as tntativas até acertar o número secreto. 
     }
 
     printf("\nFim do jogo!\n\n");
     printf("Voce acertou em %d tentativas\n\n", tentativas);
-    printf("Total de pontos %d\n", pontos); // total de pontos que o jogador fez
+    printf("Total de pontos: %.2f\n", pontos); // total de pontos que o jogador fez
 
     return 0;
 }

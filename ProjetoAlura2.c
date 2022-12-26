@@ -46,10 +46,12 @@ int main()
         tentativas = tentativas + 1;
 
         int pontosperdidos = (chute - numerosecreto) / 2;
+        pontos = pontos - pontosperdidos;
     }
 
     printf("\nFim do jogo!\n\n");
     printf("Voce acertou em %d tentativas\n\n", tentativas);
+    printf("Total de pontos %d\n", pontos);
 
     return 0;
 }

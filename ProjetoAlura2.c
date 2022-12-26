@@ -49,7 +49,7 @@ int main()
 
     printf("\nFim do jogo!\n\n");
     printf("Voce acertou em %d tentativas\n\n", tentativas);
-    printf("Total de pontos: %.2f\n", pontos); // total de pontos que o jogador fez
+    printf("Total de pontos: %.1f\n", pontos); // total de pontos que o jogador fez
 
     return 0;
 }

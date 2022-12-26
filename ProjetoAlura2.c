@@ -8,6 +8,8 @@ int main()
     int chute; // variável dos chutes
     int tentativas = 1;
 
+    int pontos = 1000;
+
     while(1) { //Faz com que o loop seja sempre verdadeiro ou seja o loop vira infinito
 
         printf("\nTentativa %d\n", tentativas);
@@ -42,6 +44,8 @@ int main()
             printf("\nO seu chute foi menor que o numero secreto!. Tente novamente!\n");
         }
         tentativas = tentativas + 1;
+
+        int pontosperdidos = (chute - numerosecreto) / 2;
     }
 
     printf("\nFim do jogo!\n\n");

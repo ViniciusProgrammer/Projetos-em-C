@@ -47,13 +47,11 @@ int main()
         scanf("%d", &chute);
         printf("\nO seu chute foi: %d\n", chute);
 
-        if (chute < 0){  // Se o chute for mernor que 0 ou seja negativo vai imprimir a mensagem abaixo
+        if (chute < 0){  
             printf("Voce nao pode chutar numeros negativos!\n");
 
-            continue; // essa função faz com que o loop não seja quebrado fazendo os próximos trechos do código funcionarem
-        }            // Até que se digite um chute maior ou igual a 0, ou seja ele não dar continuidade a tudo que está 
-                    //ai embaixo, mas também ele não para o código, ele sobe lá pra cima caso o numero seja negativo,
-                   // e vai para o c++ lá em cima  
+            continue; 
+        }             
 
         acertou = (chute == numerosecreto);
         int maior = (chute > numerosecreto);
@@ -87,7 +85,6 @@ int main()
     else{
         printf("\nVoce errou! Tente de novo!\n");
     }
-
 
     return 0;
 }

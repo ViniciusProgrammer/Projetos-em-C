@@ -13,12 +13,33 @@ int main()
 
     int numerogrande = rand();
 
-    int numerosecreto = numerogrande % 100; // variável do número  secreto
-    int chute; // variável dos chutes
+    int numerosecreto = numerogrande % 100; 
+    int chute; 
     int tentativas = 1;
-    double pontos = 1000; //Variável pontos inciando em 1000
+    double pontos = 1000; 
 
-    while(1) { //Faz com que o loop seja sempre verdadeiro ou seja o loop vira infinito
+    int acertou = 0;
+
+    int nivel;
+    printf("Qual o nivel de dificuldade?\n");
+    printf("(1) facil (2) medio (3) dificil\n\n");
+    printf("Escolha: ");
+    scanf("%d", &nivel);
+
+
+    int numerotentativas;
+
+    if (nivel == 1){
+        numerotentativas = 20;
+    }
+    else if (nivel == 2) {
+        numerotentativas = 15;
+    }
+    else {
+        numerotentativas = 6;
+    }
+
+    for(int i = 1; i <= numerotentativas; i++) { 
 
         printf("\nTentativa %d\n", tentativas);
         printf("\nInforme o seu chute: ");
@@ -32,17 +53,13 @@ int main()
             continue; // essa função faz com que o loop não seja quebrado fazendo os próximos trechos do código funcionarem
         }            // Até que se digite um chute maior ou igual a 0, ou seja ele não dar continuidade a tudo que está 
                     //ai embaixo, mas também ele não para o código, ele sobe lá pra cima caso o numero seja negativo,
-                   // e vai para o c++ lá em cima
-        
-        int acertou, maior;  
+                   // e vai para o c++ lá em cima  
 
         acertou = (chute == numerosecreto);
-        maior = (chute > numerosecreto);
+        int maior = (chute > numerosecreto);
         
 
         if (acertou) {
-            printf("\nParabens, voce acertou o numero secreto!\n\n");
-
             break;
         }
         else if (maior) {
@@ -60,10 +77,17 @@ int main()
         }
         pontos = pontos - pontosperdidos; 
     }
+    printf("\nFim de jogo!\n");
 
-    printf("\nFim do jogo!\n\n");
-    printf("Voce acertou em %d tentativas\n\n", tentativas);
-    printf("Total de pontos: %.1f\n\n", pontos); // total de pontos que o jogador fez
+    if (acertou) {
+        printf("\nVoce ganhou!\n");
+        printf("\nVoce acertou em %d tentativas\n\n", tentativas);
+        printf("Total de pontos: %.1f\n\n", pontos);
+    } 
+    else{
+        printf("\nVoce errou! Tente de novo!\n");
+    }
+
 
     return 0;
 }

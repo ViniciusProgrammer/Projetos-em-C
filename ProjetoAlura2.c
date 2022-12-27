@@ -6,7 +6,7 @@ int main()
 {
     printf("***********************************\n");
     printf("*BEM-VINDOS AO JOGO DA ADIVINHACAO*\n");
-    printf("***********************************\n");
+    printf("***********************************\n\n");
 
     int segundos = time(0);
     srand(segundos);
@@ -21,7 +21,7 @@ int main()
     int acertou = 0;
 
     int nivel;
-    printf("Qual o nivel de dificuldade?\n");
+    printf("Qual o nivel de dificuldade?\n\n");
     printf("(1) facil (2) medio (3) dificil\n\n");
     printf("Escolha: ");
     scanf("%d", &nivel);

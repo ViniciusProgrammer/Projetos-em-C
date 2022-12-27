@@ -1,9 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main()
 {
-    int numerosecreto = 42; // variável do número  secreto
+    printf("***********************************\n");
+    printf("*BEM-VINDOS AO JOGO DA ADIVINHACAO*\n");
+    printf("***********************************\n");
+
+    int segundos = time(0);
+    srand(segundos);
+
+    int numerogrande = rand();
+
+    int numerosecreto = numerogrande % 100; // variável do número  secreto
     int chute; // variável dos chutes
     int tentativas = 1;
     double pontos = 1000; //Variável pontos inciando em 1000

@@ -83,7 +83,7 @@ int main()
         printf("Total de pontos: %.1f\n\n", pontos);
     } 
     else{
-        printf("\nVoce errou! Tente de novo!\n");
+        printf("\nVoce errou! Tente de novo!\n\n");
     }
 
     return 0;
